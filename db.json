@@ -1,0 +1,16 @@
+{
+  "menus": [
+    { "id": "BF", "title": "Branded Foods" },
+    {
+      "id": "VF",
+      "title": "Veggies & Fruits",
+      "childs": [
+        {
+          "id": "VF_V",
+          "title": "Vegetables"
+        },
+        { "id": "VF_F", "title": "Fruits" }
+      ]
+    }
+  ]
+}
