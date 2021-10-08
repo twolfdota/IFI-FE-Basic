@@ -2,12 +2,14 @@
     background-color:#212121;
     display:flex;
     position:relative;
-    line-height:auto;
+    line-height:normal;
+    margin:0px 0px;
+    padding: 0px 0px;
 }
-
+.header-nav .header-nav-comp {
+    max-height:45px;
+}
 .offers {
-    height:auto;
-    
     width:25%;
     display:flex;
 }
@@ -15,7 +17,7 @@
     background-color: #84c639;
     text-decoration:none;
     color:white;
-    padding:.5em 2em;
+    padding:0.5em 2em;
     font-size: 1.2em;
 }
 
@@ -61,7 +63,6 @@
     position:absolute;
     display:flex;
     font-size:1.2em;
-    
     right:0;
     bottom:0;
    
@@ -72,7 +73,7 @@
     text-decoration:none;
     background-color:red;
     color:white;
-    padding: 0.8em 2em;
+    padding: 0.5em 2em;
     font-weight:bold;
 }
 
@@ -97,6 +98,7 @@
         position:static;
         align-content:flex-end;
         flex-flow: column wrap;
+        max-height:fit-content !important;
     }
 }
 @media (max-width: 1024px){
@@ -128,6 +130,53 @@
     .contact-nav div {
         width:100%;
     }
+    .store-logo {
+        text-align:center;
+    }
+}
+.store-intro {
+    padding:1em 0;
+}
+.store-features {
+    margin-top:2em;
+    text-align:center;
+    padding:0;
+}
+.features-list {
+    padding:0;
+}
+.features-list li {
+    display:inline-block;
+    text-decoration:none;
 }
 
+.features-list li i {
+    margin: 0px 10px;
+}
+
+.store-contact{
+    margin-top:2em;
+    text-align:center;
+    padding:0;
+}
+
+.phone_email {
+    padding:0;
+}
+
+.phone_email li {
+    display:inline-block;
+    text-decoration:none;
+    margin-right:1em;
+}
+
+.phone_email a {
+    color:black;
+    transition:all 1s;
+}
+
+.phone_email a:hover {
+    text-decoration:none;
+    color:red;
+}
 

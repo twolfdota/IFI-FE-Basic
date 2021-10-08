@@ -1,12 +1,12 @@
 $(document).ready(function(){
     console.log("hello");
-    $("body").on("mouseenter", ".dropdown", function(){
-        $(".dropdown-menu").addClass("dropdownCustom");
-        $(".dropdown-menu").stop(true, false).slideDown("slow");
+    $("header").on("mouseenter", ".dropdown", function(){
+        $(this).find(".dropdown-menu").addClass("dropdownCustom");
+        $(this).find(".dropdown-menu").stop(true, false).slideDown("slow");
       });
-    $("body").on("mouseleave", ".dropdown", function(){
+    $("header").on("mouseleave", ".dropdown", function(){
           
-        $(".dropdown-menu").stop(true, false).slideUp("slow");
+        $(this).find(".dropdown-menu").stop(true, false).slideUp("slow");
           
     });
   });

@@ -1,10 +1,10 @@
-<div>
+<div class="header">
     <div class="header-nav row">
         <div class="offers">
             <a href="#">Today's special Offers!</a>
         </div>
             
-        <div class="search">
+        <div class="search header-nav-comp">
             <form action="#" method="POST">
                 <input type="text" value="Search a product..." onfocus="this.value=''">
                 <button><i class="fa fa-search"></i></button>
@@ -12,10 +12,10 @@
         </div>
 
 
-        <div class="cart-nav">
+        <div class="cart-nav header-nav-comp">
             <button class="show-cart">View Your Cart <i class="fa fa-shopping-cart"></i></button>
         </div>
-        <div class="contact-nav">
+        <div class="contact-nav header-nav-comp">
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
                     <i class="fa fa-user"></i>
@@ -29,9 +29,25 @@
         </div>
     </div>
     <div class="store-intro container">
-        <div class="store-logo"></div>
-        <div class="store-features"></div>
-        <div class="store-contact"></div>
+        <div class="row">
+        <div class="store-logo col-lg-3 col-md-3 col-sm-12">
+            <img src="images/logo.png" height="100px" width="auto"/>
+        </div>
+        <div class="store-features col-lg-4 col-md-9 col-sm-12">
+            <ul class="features-list">
+                <li>Events <i>/</i></li>
+                <li>About Us <i>/</i></li>
+                <li>Best Deals <i>/</i></li>
+                <li>Services</li>
+            </ul>
+        </div>
+        <div class="store-contact col-lg-4 col-md-12 col-sm-12">
+            <ul class="phone_email">
+                <li><i class="fa fa-phone" aria-hidden="true"></i> (+0123) 234 567</li>
+                <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:store@grocery.com">store@grocery.com</a></li>
+            </ul>
+        </div>
         <div class="clearfix"></div>
+        </div>
     </div>
 </div>
