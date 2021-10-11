@@ -1,10 +1,15 @@
+body {
+    font-family: 'Ubuntu', sans-serif !important
+}
 .header-nav{
     background-color:#212121;
     display:flex;
-    position:relative;
+    position:fixed;
     line-height:normal;
-    margin:0px 0px;
-    padding: 0px 0px;
+    margin:0px !important;
+    width:100%;
+    z-index:10;
+
 }
 .header-nav .header-nav-comp {
     max-height:45px;
@@ -17,8 +22,14 @@
     background-color: #84c639;
     text-decoration:none;
     color:white;
-    padding:0.5em 2em;
+    padding:0.5em 2.5em;
     font-size: 1.2em;
+}
+
+.offers a:hover {
+    text-decoration:none;
+    cursor:pointer;
+    color:white;
 }
 
 .search {
@@ -62,7 +73,6 @@
 .contact-nav {
     position:absolute;
     display:flex;
-    font-size:1.2em;
     right:0;
     bottom:0;
    
@@ -70,11 +80,11 @@
 }
 
 #contactlink{
-    text-decoration:none;
     background-color:red;
     color:white;
-    padding: 0.5em 2em;
-    font-weight:bold;
+    padding: 0.5em 1.3em;
+    font-size:1.4em;
+    text-decoration:none;
 }
 
 #dropdownMenuButton{
@@ -88,54 +98,17 @@
     margin-top:0; 
     right:0 !important;
     left:auto !important;
+    background:#fff;
 }
 
 
 
-@media (max-width:1200px) {
-    .contact-nav {
-        width:100%;
-        position:static;
-        align-content:flex-end;
-        flex-flow: column wrap;
-        max-height:fit-content !important;
-    }
-}
-@media (max-width: 1024px){
-    .offers {
-        width:100%;
-    }
-    .search {
-        width:65%;
-    }
 
-}
-
-@media (max-width: 500px){
-    .offers {
-        width:100%;
-        text-align:center;
-    }
-    .offers a {
-        width:100%;
-    }
-    .search {
-        width:100%;
-    }
-    .cart-nav {
-        width:100%;
-        text-align: center;
-    }
-
-    .contact-nav div {
-        width:100%;
-    }
-    .store-logo {
-        text-align:center;
-    }
-}
 .store-intro {
-    padding:1em 0;
+    padding:4em 0 1em 0;
+    position:relative;
+    z-index:1;
+    font-size:0.9em;
 }
 .store-features {
     margin-top:2em;
@@ -151,7 +124,7 @@
 }
 
 .features-list li i {
-    margin: 0px 10px;
+    margin: 0 1em;
 }
 
 .store-contact{
@@ -167,16 +140,401 @@
 .phone_email li {
     display:inline-block;
     text-decoration:none;
-    margin-right:1em;
+    margin-right:1.3em;
 }
 
-.phone_email a {
+.store-intro a {
     color:black;
-    transition:all 1s;
+    transition:all 0.7s;
 }
 
-.phone_email a:hover {
+.store-intro a:hover {
     text-decoration:none;
     color:red;
 }
 
+footer {
+    background-color:#212121;
+}
+
+.footer-content h3{
+    color:white;
+    font-size:1.2em;
+    text-transform: uppercase;
+    margin-bottom:1.5em;
+}
+.footer-content {
+    padding:2em 0;
+}
+
+.twit {
+    margin:1.5em 0;
+}
+
+.footer-list {
+    margin:1.5em 0;
+}
+.footer-list ul {
+    list-style-type:none;
+    padding-left:0;
+}
+
+.footer-list ul li {
+    position:relative;
+}
+
+.footer-list ul li i{
+    color:white;
+    font-size:1.4em;
+    padding:0.4em 0.5em 0.4em 0;
+    margin-top:0.1em;
+}
+
+
+.footer-list ul li a{
+    position:absolute;
+    top:0.8em;
+    left:2em;
+    font-size:0.9em;
+    color:#999;
+    text-decoration:none;
+    text-transform:capitalize;
+    cursor:pointer;
+    transition:color 0.7s;
+}
+
+.footer-list ul li a:hover {
+    text-decoration:none;
+    color:white;
+}
+.newsletter {
+    background-color: red;
+    padding:3em 0;
+   
+}
+
+.newsletter .row div {
+    max-height:45px;
+}
+
+.newsletter-header {
+    text-align:right;
+    color:#fff;
+    padding:0.5em 0;
+}
+
+.newsletter-mail input[type="email"]{
+    width:72%;
+    outline: none;
+    padding: 10px;
+    background: none;
+    border: 1px solid #E6E6E6;
+    font-size: 14px;
+    color: #fff;
+}
+
+.newsletter-mail input[type="submit"]{
+    outline: none;
+    padding: 10px 0;
+    background: #fff;
+    border: 1px solid #fff;
+    font-size: 14px;
+    color: #FA1818;
+    width: 26%;
+    text-transform: uppercase;
+    transition:color 0.7s;
+    border:none;
+    cursor:pointer;
+}
+
+.newsletter-mail input[type="submit"]:hover {
+    background:#60aa34;
+    color:white;
+}
+
+
+.twit ul {
+    list-style-type:none;
+    padding-left:0;
+}
+.twit ul li {
+    margin-bottom:1.5em;
+} 
+
+.twit span{
+    color:#999;
+    font-size:0.9em;
+    display:block;
+    margin-left:2em;
+}
+.twit i {
+    color: #60aa34;
+    font-size:0.9em;
+}
+.twit label {
+    color:#fa1a1b;
+    padding-right:1em;
+}
+
+.twit span a {
+    color:White;   
+    cursor:pointer;
+    transition: all 0.7s;
+}
+
+.twit span a:hover {
+    text-decoration:none;
+    color:#999;
+}
+
+.partners div {
+    margin-bottom:2em;
+    padding-top:1.5em;
+}
+.payments-area h4 {
+    font-size:1em;
+    color:#60aa34;
+    text-transform:capitalize ;
+}
+.payments-area img {
+    max-width:100%;
+}
+.social-area h5 {
+    font-size:1em;
+    color:white;
+    text-transform: capitalize;
+}
+
+.social-area ul {
+    list-style-type:none;
+    padding-left:0;
+}
+
+.social-area ul li {
+    display:inline-block;
+}
+.social-area ul li a {
+    color:white;
+    font-size:15px;
+    border:3px solid white;
+    border-radius:20px;
+    display:block;
+    width:40px;
+    height:40px;
+    text-align:center;
+    padding-top:10px;
+    transition:all 0.7s;
+    cursor:pointer;
+}
+.social-area ul li a:hover {
+    text-decoration:none;
+    border-color:var(--transColor);
+    background-color:var(--transColor);
+}
+
+.facebook {
+    --transColor:#337ab7;
+}
+.twitter {
+    --transColor:#1DA1F2;
+}
+.google {
+    --transColor:#d34836;
+}
+.instagram {
+    --transColor:#8a3ab9;
+}
+.dribbble{
+    --transColor: #ea4c89;
+}
+
+
+
+
+.footer_copy {
+    border-top:1px solid #3a3a3a;
+    padding-top:3em;
+    font-size:0.9em;
+    margin-top:1em;
+    text-align:center;
+    color:#999;
+}
+
+.footer_copy a {
+    color:white;
+    cursor:pointer;
+    transition:color 0.7s;
+}
+
+.footer_copy a:hover {
+    text-decoration:none;
+    color: red;
+}
+
+.banner {
+    width:100%;
+    margin-left:0 !important;
+}
+.banner-nav .navbar {
+    padding:0;
+    border-top:1px solid black;
+}
+.banner > div {
+    padding:0;
+}
+.navbar-nav {
+    flex-direction:column !important;
+}
+
+#bannerNavList {
+    width:100%;
+}
+#bannerNavList li {
+    color:black;
+    border-bottom:0.5px dotted black;
+    position:relative;
+}
+
+#bannerNavList li a {
+    font-size:0.9em;
+    color:black;
+    padding-left:2em;
+    cursor:pointer;
+}
+
+#bannerNavList li a:hover {
+    text-decoration: none;
+    color:white;
+    background-color:#84c639;
+    border:none;
+}
+
+.dropdownItemCustom {
+    display:block;
+    margin-top:0 !important; 
+    left:2em !important;
+    background:#fff;
+}
+
+#bannerNavList li {
+
+}
+
+.carousel-item img{
+    min-height:13em;
+}
+
+.carousel-caption {
+    text-transform:uppercase;
+    margin:0 auto !important;
+    bottom:5em !important;
+    left:auto !important;
+}
+.carousel-caption a{
+    font-size:1em;
+    background-color:#84c639;
+    padding:0.5em 3em;
+    color:White;
+    cursor:pointer;
+    position:relative;
+    transition:all 0.3s;
+}
+
+.carousel-caption a::after {
+    font-size:1em;
+    position:absolute;
+    content:"shop now";
+    text-transform:uppercase;
+    top:1.35em;
+    left:3em;
+    color:white;
+    opacity:0;
+    transition:all 0.3s;
+}
+
+.carousel-caption a:hover {
+    text-decoration:none;
+    background-color:red;
+    color:black;
+    text-shadow:0 0.1em grey;
+}
+
+.carousel-caption a:hover:after {
+    opacity:1;
+    top:0.35em;
+ 
+}
+
+.carousel-indicators li {
+    cursor:pointer;
+}
+@media (max-width:1200px) {
+    .contact-nav {
+        width:100%;
+        position:static;
+        align-content:flex-end;
+        flex-flow: column wrap;
+        max-height:fit-content !important;
+    }
+    .header-nav{
+        position:relative;
+    }
+}
+@media (max-width: 1024px){
+    .offers {
+        width:100%;
+    }
+    .search {
+        width:65%;
+    }
+
+
+}
+
+@media (max-width: 800px){
+    .newsletter-header {
+        text-align:center !important;
+    }
+    .banner-nav {
+        text-align:center;
+    }
+    .banner-nav .navbar-toggler{
+        margin:0 auto;
+    }
+    .dropdownItemCustom {
+        text-align:Center !important;
+    }
+}
+
+@media (max-width: 500px){
+    .offers {
+        width:100%;
+        text-align:center;
+    }
+    .offers a {
+        width:100%;
+    }
+    .search {
+        width:100%;
+        padding-left:0;
+        text-align:center;
+    }
+    .cart-nav {
+        width:100%;
+        text-align: center;
+    }
+
+    .contact-nav div {
+        width:100%;
+    }
+    .store-logo {
+        text-align:center;
+    }
+    .newsletter .row div {
+        max-height: fit-content !important;
+    }
+    .newsletter-mail input{
+        display:block;
+        width:100% !important;
+    }
+}

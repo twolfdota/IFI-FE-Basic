@@ -1,0 +1,43 @@
+{
+  "menus": [
+    { "id": "BF", "title": "Branded Foods" },
+    { "id": "HH", "title": "Households" },
+    {
+      "id": "VF",
+      "title": "Veggies & Fruits",
+      "childs": [
+        {
+          "id": "VF_V",
+          "title": "Vegetables"
+        },
+        { "id": "VF_F", "title": "Fruits" }
+      ]
+    },
+    { "id": "KC", "title": "Kitchen" },
+    { "id": "SC", "title": "Short Codes" },
+    {
+      "id": "BV",
+      "title": "Beverages",
+      "childs": [
+        {
+          "id": "BV_SD",
+          "title": "Soft Drinks"
+        },
+        { "id": "BV_J", "title": "Juices" }
+      ]
+    },
+    { "id": "PF", "title": "Pet Foods" },
+    {
+      "id": "FF",
+      "title": "Frozen Foods",
+      "childs": [
+        {
+          "id": "FF_FS",
+          "title": "Frozen Snacks"
+        },
+        { "id": "FF_NV", "title": "Nonveg" }
+      ]
+    },
+    { "id": "BB", "title": "Bread & Bakery" }
+  ]
+}
