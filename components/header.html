@@ -1,37 +1,38 @@
-
-    <div class="header-nav row">
-        <div class="offers">
-            <a href="#">Today's special Offers !</a>
-        </div>
-            
-        <div class="search header-nav-comp">
-            <form action="#" method="POST">
-                <input type="text" value="Search a product..." onfocus="this.value=''">
-                <button><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-
-
-        <div class="cart-nav header-nav-comp">
-            <button class="show-cart">View Your Cart <i class="fa fa-shopping-cart"></i></button>
-        </div>
-        <div class="contact-nav header-nav-comp">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-user"></i>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Login</a>
-                  <a class="dropdown-item" href="#">Sign Up</a>
-                </div>
-              </div>
-            <a id="contactlink" href="#">Contact Us</a>
-        </div>
+<div class="header-nav row">
+    <div class="offers">
+        <a href="#">Today's special Offers !</a>
     </div>
-    <div class="store-intro container">
-        <div class="row">
+
+    <div class="search header-nav-comp">
+        <form action="#" method="POST">
+            <input type="text" value="Search a product..." onfocus="this.value=''">
+            <button><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+
+
+    <div class="cart-nav header-nav-comp">
+        <button class="show-cart" data-toggle="modal" data-target="#cartWrapper">View Your Cart <i
+                class="fa fa-shopping-cart"></i></button>
+    </div>
+    <div class="contact-nav header-nav-comp">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="fa fa-user"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Login</a>
+                <a class="dropdown-item" href="#">Sign Up</a>
+            </div>
+        </div>
+        <a id="contactlink" href="#">Contact Us</a>
+    </div>
+</div>
+<div class="store-intro container">
+    <div class="row">
         <div class="store-logo col-lg-3 col-md-3 col-sm-12">
-            <img src="images/logo.png" height="100px" width="auto"/>
+            <img src="images/logo.png" height="100px" width="auto" />
         </div>
         <div class="store-features col-lg-4 col-md-9 col-sm-12">
             <ul class="features-list">
@@ -44,8 +45,34 @@
         <div class="store-contact col-lg-5 col-md-12 col-sm-12">
             <ul class="phone_email">
                 <li><i class="fa fa-phone" aria-hidden="true"></i> (+0123) 234 567</li>
-                <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:store@grocery.com">store@grocery.com</a></li>
+                <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a
+                        href="mailto:store@grocery.com">store@grocery.com</a></li>
             </ul>
         </div>
+    </div>
+</div>
+
+<div class="modal fade" id="cartWrapper" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body cart-container">
+                <div class="my-cart">
+
+                </div>
+                <div class="cart-sum">
+                    <p>Subtotal: $<span class="cart-subtotal"></span> USD</p>
+                    <button class="checkout-btn">Check Out</button>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
         </div>
     </div>
+</div>
