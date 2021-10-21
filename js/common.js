@@ -31,46 +31,7 @@ $(document).ready(function () {
       window.location.href = `/search.html?key=${searchText}`;
   })
 
-  //Retrieve banner menu list
-  /*$.ajax({
-    url: 'menu.json',
-    dataType: 'json',
-    success: function(data) {
-      tempMenuList ="";
-      tempData = data.menus;
-      for (var i in tempData){
-        if(tempData[i].hasOwnProperty('childs') ){
-          subMenu = "";
-          $.each(tempData[i].childs, function(key,val){
-            subMenu+=`<a class="dropdown-item" href="#">${val.title}</a>`;
-          })
-          console.log(subMenu);
-          tempMenuList+=`<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="${tempData[i].id}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            ${tempData[i].title}
-          </a>
-          <div class="dropdown-menu" aria-labelledby="${tempData[i].id}">
-            ${subMenu}
-          </div>
-        </li>`
-        }
-        else {
-          tempMenuList+=`<li class="nav-item">
-          <a class="nav-link" id="${tempData[i].id}" href="#">${tempData[i].title}</a>
-        </li>`
-        }
-      } 
-      $("#bannerNavList").append(tempMenuList);
-    },
-   statusCode: {
-      404: function() {
-        alert('There was a problem with the server.  Try again soon!');
-      }
-    }
-  });*/
-
-
-
+//retrieve banner menu from db
   $.ajax({
     type: "get",
     dataType: 'json',
@@ -101,7 +62,7 @@ $(document).ready(function () {
     $("#bannerNavList").append(menuList);
     console.log(data);
   }).fail(function (jqXHR, textStatus, errorThrown) {
-    $("#bannerNavList").empty();
+    $("#bannerNavList").html("Error connecting to database");
     console.log(textStatus + ': ' + errorThrown);
   });
 
@@ -142,7 +103,6 @@ $(document).ready(function () {
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, '300');
   });
-
 
   $("header").on("click", ".show-cart", function (e) {
     initCart();
@@ -190,7 +150,7 @@ $(document).ready(function () {
     recalculate();
   })
 
-
+  //delay time when keyup as replace for enter button for text input
   var delay = (function () {
     var timer = 0;
     return function (callback, ms) {
@@ -224,6 +184,4 @@ $(document).ready(function () {
     }
     recalculate();
   })
-
-
 });

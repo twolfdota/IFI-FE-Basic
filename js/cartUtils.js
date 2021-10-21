@@ -108,7 +108,7 @@ var initCart = function () {
         }
       }
     }).fail(function (jqXHR, textStatus, errorThrown) {
-      $cartContainer.empty();
+      $cartContainer.html("Error connecting to database");
       console.log(textStatus + ': ' + errorThrown);
     });
   }
