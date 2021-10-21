@@ -12,6 +12,25 @@ $(document).ready(function () {
 
   partInit($header, './components/header.html');
   partInit($footer, './components/footer.html');
+
+
+  $(document).click(function (e) {
+    if (!$(e.target).hasClass("cart-modal") && !$(e.target).parents("#cartWrapper").length && $(e.target).attr("class") != "cart-item-remover") {
+      $('.my-popup').hide();
+    }
+  });
+
+  $("header").on("click", ".close", function () {
+    $(".my-popup").hide();
+  })
+
+
+  $("header").on("click", ".btn-search", function(e){
+      e.preventDefault();
+      const searchText = $(e.target).parent().find(".search-text").val();
+      window.location.href = `/search.html?key=${searchText}`;
+  })
+
   //Retrieve banner menu list
   /*$.ajax({
     url: 'menu.json',
@@ -125,183 +144,82 @@ $(document).ready(function () {
   });
 
 
-
-  var recalculate = function () {
-    let subTotal = 0;
-    $(".my-cart").find(".cart-item").each(function(){
-        var originPrice = parseFloat($(this).find(".origin-price").val());
-        var dscPrice = parseFloat($(this).find(".price-after-dsc").val());
-        var rawQty = parseInt($(this).find(".cart-qty").val());
-
-        
-        var deposit = rawQty*(originPrice - dscPrice);
-        var itemTotal = rawQty*dscPrice;
-        subTotal += itemTotal;
-        $(this).find(".cart-disc-depo").text(deposit.toFixed(2));
-        $(this).find(".cart-item-total").text(itemTotal.toFixed(2));
-    })
-    $(".cart-subtotal").text(subTotal.toFixed(2));
-  }
-  //init cart
-  var initCart = function () {
-    //localStorage.removeItem("myCart");
-    $cartContainer = $(".my-cart");
-    $cartContainer.empty();
-    if (!localStorage.getItem("myCart")) {
-      localStorage.setItem("myCart", JSON.stringify({}));
-    }
-    var rawCart = JSON.parse(localStorage.getItem("myCart"));
-    if(!rawCart.length) {
-      $("header").find("#cartModalLabel").text("Your shopping cart is empty");
-      $("header").find(".cart-container").hide();
-    }
-    else  {
-      $("header").find("#cartModalLabel").text("");
-      $("header").find(".cart-container").show("");
-    }
-
-    for (var n in rawCart) {
-      thisQty = rawCart[n].qty;
-      $.ajax({
-        type: "get",
-        dataType: 'json',
-        async: false,
-        url: `http://localhost:3000/products/${rawCart[n].proId}`
-      }).done(function (data) {
-        newCartItem = `<div class="cart-item proId="${data.id}">
-          <div class="title-n-discount">
-          <p>${data.title}</p>
-          <p class="cart-item-discount">Discount: $<span class="cart-disc-depo"></span></p>
-          </div>
-          <div class="cart-item-detail" proId="${data.id}">
-          <input class="cart-qty" type="text" value="${thisQty}"/>
-          <button class="cart-item-remover">x</button>
-          <div class="cart-item-price-container">
-          <p>$<span class="cart-item-total"></span></p>
-          <input type="hidden" class="origin-price" value="${data.price}"/>
-          <input type="hidden" class="price-after-dsc" value="${data.dscPrice}"/>
-          </div>
-          </div>
-          </div>`
-
-        $cartContainer.append(newCartItem);
-
-      }).fail(function (jqXHR, textStatus, errorThrown) {
-        $cartContainer.empty();
-        console.log(textStatus + ': ' + errorThrown);
-      });
-
-    }
-    recalculate();
-  }
-
-
-
-
   $("header").on("click", ".show-cart", function (e) {
     initCart();
+    $(".my-popup").show();
   })
 
 
   //addToCart 
-  $("#prodList").on("click", ".prod-add-btn", function (e) {
+  $("body").on("click", ".prod-add-btn", function (e) {
     itemDup = false;
 
     itemId = $(e.target).parent().find(".pro-id").val();
-    var rawCart = JSON.parse(localStorage.getItem("myCart"));
+    let rawCart = JSON.parse(localStorage.getItem("myCart"));
     console.log(itemId);
-    if (rawCart[0]) {
-      for (var p of rawCart) {
-        console.log(p.proId);
-        if (p.proId == itemId) {
-          var numQty = parseInt(p.qty) + 1;
-          console.log(numQty);
-          p.qty = numQty;
-          itemDup = true;
-          break;
-        }
-      }
+    if (!rawCart) rawCart = {};
+    if (rawCart[itemId]) {
+
+      var numQty = parseInt(rawCart[itemId].qty) + 1;
+      console.log(numQty);
+      rawCart[itemId].qty = numQty;
     }
+
     else {
-      rawCart = [];
-    }
-    if (!itemDup) {
       const newItem = {
         proId: itemId,
         qty: 1
       }
-      rawCart.push(newItem);
+      rawCart[itemId] = newItem;
 
     }
     localStorage.setItem('myCart', JSON.stringify(rawCart));
     initCart();
+    $(".my-popup").show();
   });
 
 
-  //remove item from list 
-  function removeById(array, itemId, event) {
-    let deleted = false;
-    for (var a of array) {
-      if (a.proId == itemId) {
-        var currIndex = array.indexOf(a);
-        if (currIndex > -1) {
-          array.splice(currIndex, 1);
-          deleted = true;
-        }
-        break;
-      }
-    }
-    if (deleted) {
-      $(event.target).closest(".cart-item").remove();
-      localStorage.setItem('myCart', JSON.stringify(array));
-      if (!array.length) $("header").find("#cartWrapper").modal("hide"); 
-    }
-  }
 
 
   //remove cart item on click
-  $("header").on("click", ".cart-item-remover", function (e) {
-    var rawCart = JSON.parse(localStorage.getItem("myCart"));
-    var currId = $(e.target).parent().attr("proId");
+  $("body").on("click", ".cart-item-remover", function (e) {
+    let rawCart = JSON.parse(localStorage.getItem("myCart"));
+    const currId = $(e.target).closest(".cart-item").attr("proId");
     console.log(currId);
     removeById(rawCart, currId, e);
     recalculate();
   })
 
 
-  var delay = (function(){
+  var delay = (function () {
     var timer = 0;
-    return function(callback, ms){
-    clearTimeout (timer);
-    timer = setTimeout(callback, ms);
-   };
+    return function (callback, ms) {
+      clearTimeout(timer);
+      timer = setTimeout(callback, ms);
+    };
   })();
 
-  $("header").on("keyup", ".cart-qty", function (e) {
-    delay(function(){
+  $("body").on("keyup", ".cart-qty", function (e) {
+    delay(function () {
       $(e.target).blur();
     }, 400)
   })
 
   //update cart qty
-  $("header").on("change", ".cart-qty", function (e) {
-    var newQty = $(e.target).val();
-    var currId = $(e.target).parent().attr("proId");
+  $("body").on("change", ".cart-qty", function (e) {
+    const newQty = $(e.target).val();
+    const currId = $(e.target).closest(".cart-item").attr("proId");
     console.log(currId);
-    var rawCart = JSON.parse(localStorage.getItem("myCart"));
-    if (Number.isNaN(newQty) || parseInt(newQty) < 0) {
+    let rawCart = JSON.parse(localStorage.getItem("myCart"));
+    if (!(newQty) || isNaN(newQty) || parseInt(newQty) < 0 || newQty.includes(".")) {
       alert("invalid quantity value!");
+      return;
     }
     else if (parseInt(newQty) == 0) {
       removeById(rawCart, currId, e);
     }
     else {
-      for (var p of rawCart) {
-        if (p.proId == currId) {
-          p.qty = newQty;
-          break;
-        }
-      }
+      rawCart[currId].qty = newQty;
       localStorage.setItem('myCart', JSON.stringify(rawCart));
     }
     recalculate();

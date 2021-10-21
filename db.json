@@ -1,7 +1,13 @@
 {
   "menus": [
-    { "id": "BF", "title": "Branded Foods" },
-    { "id": "HH", "title": "Households" },
+    {
+      "id": "BF",
+      "title": "Branded Foods"
+    },
+    {
+      "id": "HH",
+      "title": "Households"
+    },
     {
       "id": "VF",
       "title": "Veggies & Fruits",
@@ -10,11 +16,20 @@
           "id": "VF_V",
           "title": "Vegetables"
         },
-        { "id": "VF_F", "title": "Fruits" }
+        {
+          "id": "VF_F",
+          "title": "Fruits"
+        }
       ]
     },
-    { "id": "KC", "title": "Kitchen" },
-    { "id": "SC", "title": "Short Codes" },
+    {
+      "id": "KC",
+      "title": "Kitchen"
+    },
+    {
+      "id": "SC",
+      "title": "Short Codes"
+    },
     {
       "id": "BV",
       "title": "Beverages",
@@ -23,10 +38,16 @@
           "id": "BV_SD",
           "title": "Soft Drinks"
         },
-        { "id": "BV_J", "title": "Juices" }
+        {
+          "id": "BV_J",
+          "title": "Juices"
+        }
       ]
     },
-    { "id": "PF", "title": "Pet Foods" },
+    {
+      "id": "PF",
+      "title": "Pet Foods"
+    },
     {
       "id": "FF",
       "title": "Frozen Foods",
@@ -35,18 +56,177 @@
           "id": "FF_FS",
           "title": "Frozen Snacks"
         },
-        { "id": "FF_NV", "title": "Nonveg" }
+        {
+          "id": "FF_NV",
+          "title": "Nonveg"
+        }
       ]
     },
-    { "id": "BB", "title": "Bread & Bakery" }
+    {
+      "id": "BB",
+      "title": "Bread & Bakery"
+    }
   ],
-    "products":[
-        {"id": "FSO","title": "Fortune Sunflower Oil", "price":"10", "dscPrice": "7.99", "qty": "5"},
-        {"id": "PSD","title": "Pepsi Soft Drink", "price":"10", "dscPrice": "8", "qty": "3"},
-        {"id": "BR","title": "Basmati Rice", "price":"15", "dscPrice": "11.99", "qty": "0"},
-        {"id": "DF","title": "Dogs Food", "price":"11", "dscPrice": "11", "qty": "1"}
-    ]
-
+  "products": [
+    {
+      "id": "FSO",
+      "title": "Fortune Sunflower Oil",
+      "price": "10",
+      "dscPrice": "7.99",
+      "qty": "5",
+      "cat": "Offer"
+    },
+    {
+      "id": "PSD",
+      "title": "Pepsi Soft Drink",
+      "price": "10",
+      "dscPrice": "8",
+      "qty": "3",
+      "cat": "Offer"
+    },
+    {
+      "id": "BR",
+      "title": "Basmati Rice",
+      "price": "15",
+      "dscPrice": "11.99",
+      "qty": "2",
+      "cat": "Offer"
+    },
+    {
+      "id": "DF",
+      "title": "Dogs Food",
+      "price": "11",
+      "dscPrice": "11",
+      "qty": "1",
+      "cat": "Offer"
+    },
+    {
+      "id": "CPBR",
+      "title": "CHARMINAR PULAO BASMATI RICE 5 KG",
+      "price": "25",
+      "dscPrice": "21",
+      "qty": "6",
+      "cat": "Single"
+    },
+    {
+      "id": "KIS",
+      "title": "Knorr Instant Soup (100 Gm)",
+      "price": "5",
+      "dscPrice": "3",
+      "qty": "5",
+      "cat": "Food"
+    },
+    {
+      "id": "CN",
+      "title": "Chings Noodles (75 Gm)",
+      "price": "8",
+      "dscPrice": "5",
+      "qty": "5",
+      "cat": "Food"
+    },
+    {
+      "id": "LS",
+      "title": "Lahsun Sev (150 Gm)",
+      "price": "5",
+      "dscPrice": "3",
+      "qty": "5",
+      "cat": "Food"
+    },
+    {
+      "id": "PBR",
+      "title": "Premium Bake Rusk (300 Gm)",
+      "price": "7",
+      "dscPrice": "5",
+      "qty": "3",
+      "cat": "Food"
+    },
+    {
+      "id": "FSP",
+      "title": "Fresh Spinach (Palak)",
+      "price": "3",
+      "dscPrice": "2",
+      "qty": "3",
+      "cat": "Veg"
+    },
+    {
+      "id": "FMD",
+      "title": "Fresh Mango Dasheri (1 Kg)",
+      "price": "8",
+      "dscPrice": "5",
+      "qty": "3",
+      "cat": "Veg"
+    },
+    {
+      "id": "FAR",
+      "title": "Fresh Apple Red (1 Kg)",
+      "price": "8",
+      "dscPrice": "6",
+      "qty": "3",
+      "cat": "Veg"
+    },
+    {
+      "id": "FB",
+      "title": "Fresh Boccoli (500 Gm)",
+      "price": "6",
+      "dscPrice": "4",
+      "qty": "0",
+      "cat": "Veg"
+    },
+    {
+      "id": "MFJ",
+      "title": "Mixed Fruit Juice (1 Ltr)",
+      "price": "4",
+      "dscPrice": "3",
+      "qty": "2",
+      "cat": "Bevs"
+    },
+    {
+      "id": "PJS",
+      "title": "Prune Juice - Sunsweet (1 Ltr)",
+      "price": "5",
+      "dscPrice": "4",
+      "qty": "2",
+      "cat": "Bevs"
+    },
+    {
+      "id": "CCZC",
+      "title": "Coca Cola Zero Can (330 Ml)",
+      "price": "5",
+      "dscPrice": "3",
+      "qty": "2",
+      "cat": "Bevs"
+    },
+    {
+      "id": "SB",
+      "title": "Sprite Bottle (2 Ltr)",
+      "price": "4",
+      "dscPrice": "3",
+      "qty": "3",
+      "cat": "Bevs"
+    }
+  ],
+  "orders": [
+    {
+      "details": [
+        {
+          "proId": "FSO",
+          "qty": 2
+        },
+        {
+          "proId": "PSD",
+          "qty": 2
+        },
+        {
+          "proId": "BR",
+          "qty": 4
+        }
+      ],
+      "cName": "Tuan Anh Dao",
+      "cPhone": "0444444444",
+      "cLandmark": "",
+      "cCity": "Hanoi",
+      "addressType": "office",
+      "id": 1
+    }
+  ]
 }
-
-

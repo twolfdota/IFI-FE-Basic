@@ -1,8 +1,0 @@
-{
-    "product":[
-        {"id": "FSO","title": "Fortune Sunflower Oil", "price":"10", "dscPrice": "7.99", "qty": "5"},
-        {"id": "PSD","title": "Pepsi Soft Drink", "price":"10", "dscPrice": "8", "qty": "3"},
-        {"id": "BR","title": "Basmati Rice", "price":"15", "dscPrice": "11.99", "qty": "0"},
-        {"id": "DF","title": "Dogs Food", "price":"11", "dscPrice": "11", "qty": "1"}
-    ]
-}

@@ -1,0 +1,262 @@
+.single-banner {
+    background:url("../images/single-banner.jpg") no-repeat 0px 0px;
+    background-size:cover;
+    min-height: 300px;
+    text-align:center;
+    text-transform: capitalize;
+    position:relative;
+}
+
+.single-banner h3 {
+    font-size:2em;
+    padding:0.3em 0.5em;
+    color:red;
+    background-color: white;
+    margin:110px 28% 0 28%;
+}
+
+.blink-offer {
+    position:absolute;
+    right:26%;
+    top:100px;
+    animation:blinker 2s linear infinite;
+    background:url("../images/img-sp.png") no-repeat 0px 0px;
+    width:50px;
+    height:50px;
+    display:block;
+}
+.single-content {
+    padding: 3em 3em;
+    overflow:hidden;
+}
+
+.single-content > div {
+    padding:1.5em 2em;
+}
+.single-title h2 {
+    text-transform:uppercase;
+}
+.prod-img-container {
+    position:relative;
+    padding:2em 2em;
+    box-shadow: 0px 0px 5px #E1E1E1;
+    
+}
+
+.prod-img-container img {
+    max-width:350px;
+}
+
+.magGlass {
+    background-color:white;
+    z-index:10;
+    position:absolute;
+    border-radius:100%;
+    width:120px;
+    height:120px;
+    background:url("../images/CPBR.png") no-repeat;
+    background-size:500px auto;
+    background-position:center;
+    margin: 2em 2em;
+    cursor:none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    border:1px solid black;
+    overflow: hidden;
+}
+
+.prod-detail > div {
+    margin-bottom:2em;
+}
+.star-rating span {
+    font-size:1.1em;
+    transition: color 0.3s;
+}
+
+.checked {
+    color:#84c639;
+}
+
+.prod-description h4 {
+    text-transform: uppercase;
+}
+.prod-description p {
+    font-size: 14px;
+    color: #999;
+    line-height: 2em;
+    margin: .5em 0 0;
+    width: 80%;
+}
+
+.buying-area h5 {
+    font-weight:bold;
+    padding-bottom:1em;
+}
+
+.buying-area .dsc-price {
+    font-weight:lighter;
+    text-decoration: line-through;
+    padding-left:1em;
+    font-size:0.9em;
+}
+
+.buying-area .prod-add-btn {
+    width:fit-content;
+    margin:1em 0;
+    padding:0.5em 3em;
+}
+
+.popular-brand {
+    background-color:#f5f5f5;
+    padding:4em 0;
+
+}
+
+.popular-brand h2 {
+    text-transform: uppercase;
+    font-size:1.8em;
+    margin:1em 0;
+}
+
+@media (max-width:600px) {
+    .single-banner h3{
+        margin:110px 10% 0 10%;
+        font-size:1.2em;
+    }
+
+    .blink-offer {
+        right:5%;
+    }
+    
+    .single-content {
+        padding: 0 !important;
+    }
+    .single-content h2 {
+        font-size:1.3em;
+    }
+
+    .prod-description h4 {
+        font-size:1.1em;
+    }
+    .prod-description p{
+        width:100%;
+        font-size:0.8em;
+    }
+
+    .popular-brand h2 {
+        font-size:1.4em;
+        text-align: center;
+    }
+
+    .home-breadcrumb .bread-container {
+        padding:0;
+    }
+
+    .cat-content .view {
+        padding:0;
+    }
+
+    .view-tenth .mask {
+        padding-top:2em !important;
+        font-size:0.9em;
+    }
+
+    .cat-content .mask h4 {
+        font-size:1.1em;
+        line-height:1.2em;
+        padding:0.2em 0.1em;
+    }
+
+    .cat-content h4 {
+        line-height:1.4em;
+        font-size:1.2em;
+    }
+    
+    .cat-content ol {
+        font-size:0.9em;
+    }
+}
+
+@media (max-width:750px) {
+    .cat-content {
+        padding:1em 5% !important;
+    }
+    .cat-content .view {
+        padding:0 1em;
+    }
+}
+.products-sum .popular-brand {
+    background:#fff;
+}
+
+.cat-intro {
+    padding:2em 0;
+}
+.cat-intro > div {
+    padding:2em 1em 0 0;
+}
+
+.cat-content h4 {
+    margin:0.6em 0.5em;
+}
+
+.view-tenth {
+   text-align:center;
+   overflow:hidden;
+   position:relative;
+}
+
+.view-tenth .mask {
+    background-color:red;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    padding-top:6em;
+    display:none;
+    animation: slowAppear 0.5s ease-in-out;
+    color:white;
+}
+
+.mask h4 {
+    margin:0;
+    display:block;
+    background-color:black;
+    line-height:1.5em;
+    text-transform:uppercase;
+}
+
+.mask p {
+    font-style:italic;
+    padding:0.5em 1.5em;
+    font-size:0.9em;
+}
+
+.img-responsive {
+    width:100%;
+    height:auto;
+    transition:all 0.5s linear;
+}
+
+.cat-content:hover .img-responsive {
+    transform:scale(10);
+}
+
+.cat-content:hover .mask {
+    display:block;
+}
+
+.cat-content ol {
+    padding-left:2em;
+    line-height:2em;
+    color:#999;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.search-result {
+    min-height:400px;
+}
+@keyframes slowAppear {
+    from {transform:scale(0);opacity:0}
+    to {transform:scale(1);opacity:1}
+}

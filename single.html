@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <title>Single</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+    <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/product.css" />
+    <script src="js/prodgetter.js"></script>
+    <script src="js/cartUtils.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/single.js"></script>
+</head>
+
+<body>
+    <header></header>
+    <div class="home-breadcrumb">
+        <div class="bread-container">
+            <ul>
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="/">Home</a>
+                    <span>|</span>
+                </li>
+                <li>Single page</li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner row">
+        <div class="banner-nav col-lg-2 col-md-2 col-sm-12">
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navListContainer"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navListContainer">
+                    <ul class="navbar-nav mr-auto" id="bannerNavList">
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-12 row">
+            <div class="single-banner col-12">
+                <h3>Best Deals For New Products<span class="blink-offer"></span></h3>
+            </div>
+            <div class="single-content row">
+                <div class="single-title col-12">
+                    <h2>charminar pulao basmati rice 5 kg</h2>
+                </div>
+                <div class="prod-img-card col-md-5 col-lg-4">
+                    <div class="prod-img-container">
+                        <img class="prod-img" src="images/CPBR.png" width="100%" height="auto" alt="single" />
+                        <div class="magGlass"></div>
+                        <img src="images/no-stock.png" alt="out of stock" class="no-stock-img"/>
+                    </div>
+                </div>
+                <div class="col-md-7 col-lg-8 prod-detail">
+                    <div class="star-rating">
+                        <span class="fa fa-star" voteVal="1"></span>
+                        <span class="fa fa-star" voteVal="2"></span>
+                        <span class="fa fa-star" voteVal="3"></span>
+                        <span class="fa fa-star" voteVal="4"></span>
+                        <span class="fa fa-star" voteVal="5"></span>
+                    </div>
+                    <div class="prod-description">
+                        <h4>Description :</h4>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                            officia deserunt mollit anim id est laborum.Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur.</p>
+                    </div>
+                    <div class="buying-area">
+                        <h5>$<span class="prod-price">21.00</span> <span class="dsc-price">25.00</span></h5>
+                        <button class="prod-add-btn cart-modal">ADD TO CART</button>
+                        <input type="hidden" class="pro-id" value="CPBR" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popular-brand">
+        <div class="container main-content">
+            <h1>Popular Brands</h1>
+            <h2>FOOD</h2>
+            <div class="row food-list">
+
+            </div>
+            <h2>Vegetables & Fruits</h2>
+            <div class="row veg-list">
+
+            </div>
+            <h2>Beverages</h2>
+            <div class="row bevs-list">
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer></footer>
+</body>
+
+</html>
